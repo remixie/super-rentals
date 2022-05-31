@@ -1,5 +1,5 @@
 <article class='rental'>
-  <Rental::Image src={{@rental.image}} alt='A picture of {{@rental.title}}' />
+  <Rental::Image src="https://{{ @rental.image}}" alt='A picture of {{@rental.title}}' />
   <div class='details'>
     <h3>
       <LinkTo @route='rental' @model={{@rental}}>

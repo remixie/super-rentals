@@ -21,6 +21,16 @@ module.exports = function (environment) {
       // Here you can pass flags/options to your application instance
       // when it is created
     },
+    contentSecurityPolicy: {
+      'connect-src': [
+        "'self'",
+        'http://localhost:3000/rentals',
+        'eval',
+        'https://fonts.gstatic.com/s/lato/v23/S6uyw4BMUTPHjxAwXiWtFCfQ7A.woff2',
+        'https://fonts.googleapis.com/css?family=Lato:300,300italic,400,700,700italic',
+        'https://fonts.gstatic.com/s/lato/v23/S6u_w4BMUTPHjxsI9w2_FQftx9897sxZ.woff2',
+      ],
+    },
   };
 
   if (environment === 'development') {
@@ -47,7 +57,7 @@ module.exports = function (environment) {
     // here you can enable a production-specific feature
   }
 
-  ENV.MAPBOX_ACCESS_TOKEN = process.env.MAPBOX_ACCESS_TOKEN;
+  ENV.MAPBOX_ACCESS_TOKEN = process.env.MAPBOX_ACCESS_TOKEN; //Replace process.env.MAPBOX_ACCESS_TOKEN with your own Mapbox API Default public token
 
   return ENV;
 };
