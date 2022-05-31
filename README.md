@@ -20,6 +20,9 @@ You will need the following things properly installed on your computer.
 
 ## Running / Development
 
+### Before running the command below, go to config/enviroment.js and set `ENV.MAPBOX_ACCESS_TOKEN` to your own Mapbox API key in quotes.
+For example: `ENV.MAPBOX_ACCESS_TOKEN = 'pk.sfdsfsdgwefwefwe.ewewfwefwefwefweffrfgwr';`
+
 * `ember serve`
 * Visit your app at [http://localhost:4200](http://localhost:4200).
 * Visit your tests at [http://localhost:4200/tests](http://localhost:4200/tests).
@@ -29,9 +32,7 @@ You will need the following things properly installed on your computer.
 Make use of the many generators for code, try `ember help generate` for more details
 
 ### Running Tests
-
-* `ember test`
-* `ember test --server`
+WIP
 
 ### Linting
 
