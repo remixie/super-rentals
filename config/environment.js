@@ -24,11 +24,29 @@ module.exports = function (environment) {
     contentSecurityPolicy: {
       'connect-src': [
         "'self'",
-        'http://localhost:3000/rentals',
-        'eval',
-        'https://fonts.gstatic.com/s/lato/v23/S6uyw4BMUTPHjxAwXiWtFCfQ7A.woff2',
-        'https://fonts.googleapis.com/css?family=Lato:300,300italic,400,700,700italic',
-        'https://fonts.gstatic.com/s/lato/v23/S6u_w4BMUTPHjxsI9w2_FQftx9897sxZ.woff2',
+        'http://localhost:3000/',
+        'http://localhost:4200/',
+        "'unsafe-eval'",
+        'https://fonts.gstatic.com/',
+        'https://fonts.googleapis.com/',
+      ],
+      'script-src': ["'unsafe-eval'", 'http://localhost:7357/'],
+      'font-src': ['https://fonts.gstatic.com/'],
+      'img-src': [
+        'https://upload.wikimedia.org/',
+        'https://api.mapbox.com/',
+        'http://localhost:7357',
+        'https://https//upload.wikimedia.org/',
+      ],
+      'style-src-elem': [
+        'http://localhost:7357/',
+        'https://fonts.gstatic.com/',
+        'https://fonts.googleapis.com/',
+      ],
+      'style-src': [
+        'http://localhost:7357/assets/test-support.css',
+        'http://localhost:7357/assets/vendor.css',
+        'http://localhost:7357/assets/super-rentals.css',
       ],
     },
   };
@@ -57,7 +75,8 @@ module.exports = function (environment) {
     // here you can enable a production-specific feature
   }
 
-  ENV.MAPBOX_ACCESS_TOKEN = process.env.MAPBOX_ACCESS_TOKEN; //Replace process.env.MAPBOX_ACCESS_TOKEN with your own Mapbox API Default public token
+  ENV.MAPBOX_ACCESS_TOKEN = ''
+    //Replace with your own Mapbox API Default public token
 
   return ENV;
 };
